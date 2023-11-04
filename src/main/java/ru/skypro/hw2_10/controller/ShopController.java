@@ -25,6 +25,12 @@ public class ShopController {
         return "Items added to the cart: " + itemIDs;
     }
 
+    // Если мы желаем, чтобы в строку браузера в качестве параметра после знака ? указывалось что-то другое,
+    // чем itemIDs, то мы можем после слова @RequestParam в скобках указать другой параметр ("ids") или (value = "ids")
+    // после знака ? продукты можно добавлять двумя способами:
+    // Первый способ: itemIds=23,33,33,88,88,99,101
+    // Второй способ: itemIds=23&itemIds=33&itemIds=33&itemIds=88&itemIds=88&itemIds=99&itemIds=101
+
     @GetMapping("/get")
     public List<Integer> getCart() {
 

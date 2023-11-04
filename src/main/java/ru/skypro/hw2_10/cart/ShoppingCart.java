@@ -19,8 +19,8 @@ public class ShoppingCart {
         this.itemIDs = new ArrayList<>();
     }
 
-    //public ShoppingCart(List<Integer> itemIDs) {
-
+    //public ShoppingCart(List<Integer> itemIDs) {    // Конструктор, создаваемый IDEA, использовать не рекомендуется
+                                                      // так как в качестве параметра в метод принимается лист, который еще не создан
         //this.itemIDs = itemIDs;
     //}
 
@@ -34,8 +34,8 @@ public class ShoppingCart {
         return itemIDs;
     }
 
-    @PostConstruct
-    public void initMethod() {
+    @PostConstruct                              // Данный метод выводит в консоль информацию о созданных бинах
+    public void initMethod() {                  // Программа работает без него
 
         System.out.println("Bean is created");
     }
